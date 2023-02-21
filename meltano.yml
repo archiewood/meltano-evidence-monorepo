@@ -1,0 +1,19 @@
+version: 1
+default_environment: dev
+project_id: 3fa34653-d5ae-4b33-8f72-7480e702a3be
+environments:
+- name: dev
+- name: staging
+- name: prod
+hub_url: https://deploy-preview-1158--meltano-hub.netlify.app
+plugins:
+  utilities:
+  - name: evidence
+    variant: meltanolabs
+    pip_url: evidence-ext>=0.5
+    config:
+      settings:
+        database: duckdb
+        duckdb:
+          filename: needful_things.duckdb
+          gitignore_duckdb: false

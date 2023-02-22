@@ -7,7 +7,7 @@ This page covers using your data to choose what Evidence displays with Loops and
 select
 category,
 sum(sales) as sales_usd0k
-from orders
+from 'sources/orders.parquet'
 group by 1
 order by 2 desc
 ```
@@ -32,7 +32,7 @@ You can use `{#each}` statements to loop through **each row** of a query, and ge
 select
 date_trunc('day', order_datetime) as date,
 sum(sales) as sales_usd
-from orders
+from 'sources/orders.parquet'
 group by 1
 order by 1 desc
 limit 7

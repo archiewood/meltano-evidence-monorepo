@@ -24,7 +24,7 @@ select
   count(*) as number_of_orders,
   sum(sales) as sales_usd0k,
   sum(sales)/count(*) as average_order_value_usd2
-from orders
+from 'sources/orders.parquet'
 
 group by 1 order by 1 desc
 ```

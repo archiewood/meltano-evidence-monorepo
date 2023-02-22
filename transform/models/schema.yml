@@ -9,6 +9,15 @@ sources:
       - name: reviews
 
 models:
+    - name: orders
+      description: "a summary of needful things orders and the data we hold on them"
+      columns:
+        - name: id
+          description: "order id"
+          tests:
+            - unique
+            - not_null
+    
     - name: customers
       description: "a summary of needful things customers and the data we hold on them"
       columns:

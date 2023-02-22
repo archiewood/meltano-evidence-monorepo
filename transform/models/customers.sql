@@ -10,7 +10,7 @@ cte_reviews as (
 
 select
     orders.email,
-    upper(orders.first_name) as name,
+    orders.first_name,
     orders.last_name,
     orders.address,
     orders.state,
